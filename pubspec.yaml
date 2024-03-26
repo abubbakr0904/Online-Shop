@@ -1,0 +1,59 @@
+name: qwerty
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  firebase_core: ^2.27.1
+  firebase_auth: ^4.17.9
+  provider: ^6.1.2
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
+  google_sign_in: ^6.2.1
+  cloud_firestore: ^4.15.9
+  flutter_local_notifications: ^17.0.0
+  flutter_timezone: ^1.0.4
+  fluttertoast: ^8.0.8
+  rename: ^3.0.2
+  icons_launcher: ^2.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+     - family: Poppins
+       fonts:
+         - asset: assets/font/Poppins/Poppins-Black.ttf
+         - asset: assets/font/Poppins/Poppins-Bold.ttf
+         - asset: assets/font/Poppins/Poppins-ExtraBold.ttf
+         - asset: assets/font/Poppins/Poppins-Medium.ttf
+         - asset: assets/font/Poppins/Poppins-Regular.ttf
+         - asset: assets/font/Poppins/Poppins-SemiBold.ttf
+         - asset: assets/font/Poppins/Poppins-Thin.ttf
+
+icons_launcher:
+  image_path: "assets/images/icon_app.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true

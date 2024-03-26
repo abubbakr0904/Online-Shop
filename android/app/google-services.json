@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552361231145",
+    "project_id": "smart-quiz-bac40",
+    "storage_bucket": "smart-quiz-bac40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552361231145:android:a9ef31be9a1e0e24e5ed38",
+        "android_client_info": {
+          "package_name": "com.example.qwerty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyylIklEBh5zcIciK5w6hiSQL1vEBBFPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAgK-DFdcCl9yU7adIMtODEBq5P4tO1PoU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>552361231145</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.qwerty</string>
+	<key>PROJECT_ID</key>
+	<string>smart-quiz-bac40</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smart-quiz-bac40.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:552361231145:ios:e4ec2513effa1ee0e5ed38</string>
+</dict>
+</plist>
