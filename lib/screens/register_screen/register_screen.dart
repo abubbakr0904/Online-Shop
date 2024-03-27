@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:qwerty/screens/bottom_navigator/bottom_navigator.dart';
 import 'package:qwerty/utils/images/images.dart';
 import 'package:qwerty/utils/regxps/reg_xp.dart';
 
@@ -38,7 +39,7 @@ class _RegisterState extends State<Register> {
     Future.microtask(() {
       if (user != null) {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const HomeScreen();
+          return const TabScreen();
         }));
       }
     });

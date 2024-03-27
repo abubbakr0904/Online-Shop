@@ -1,0 +1,16 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1316_12564)">
+        <path d="M22.1555 0.75L14.8055 8.1C14.5556 8.35225 14.2239 8.50698 13.8701 8.53631C13.5162 8.56565 13.1635 8.46766 12.8755 8.26L9.57552 5.91C9.30529 5.72555 8.98216 5.63451 8.65539 5.65076C8.32862 5.66701 8.01612 5.78965 7.76552 6L1.15552 11.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.1555 0.75H22.1555V6.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.4055 19.25H22.9055C22.9055 19.25 23.6555 19.25 23.6555 20V22.5C23.6555 22.5 23.6555 23.25 22.9055 23.25H15.4055C15.4055 23.25 14.6555 23.25 14.6555 22.5V20C14.6555 20 14.6555 19.25 15.4055 19.25Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.40552 19.25H10.9055C10.9055 19.25 11.6555 19.25 11.6555 20V22.5C11.6555 22.5 11.6555 23.25 10.9055 23.25H3.40552C3.40552 23.25 2.65552 23.25 2.65552 22.5V20C2.65552 20 2.65552 19.25 3.40552 19.25Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.90552 15.25H9.40552C9.40552 15.25 10.1555 15.25 10.1555 16V18.5C10.1555 18.5 10.1555 19.25 9.40552 19.25H1.90552C1.90552 19.25 1.15552 19.25 1.15552 18.5V16C1.15552 16 1.15552 15.25 1.90552 15.25Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.9055 15.25H21.4055C21.4055 15.25 22.1555 15.25 22.1555 16V18.5C22.1555 18.5 22.1555 19.25 21.4055 19.25H13.9055C13.9055 19.25 13.1555 19.25 13.1555 18.5V16C13.1555 16 13.1555 15.25 13.9055 15.25Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.4055 11.25H22.9055C22.9055 11.25 23.6555 11.25 23.6555 12V14.5C23.6555 14.5 23.6555 15.25 22.9055 15.25H15.4055C15.4055 15.25 14.6555 15.25 14.6555 14.5V12C14.6555 12 14.6555 11.25 15.4055 11.25Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+        <clipPath id="clip0_1316_12564">
+            <rect width="24" height="24" fill="white" transform="translate(0.405518)"/>
+        </clipPath>
+    </defs>
+</svg>

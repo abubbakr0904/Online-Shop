@@ -10,4 +10,5 @@ class AppConstants {
 
   static String categories = "categories";
   static String products = "products";
+  static String key = "AAAAgJtLgyk:APA91bFAvJXNxtScO-oOReMv_86xFXt4mi_dvt4fLUYN2rAujjJneQUpmzXKDp3osuC-do8BRBVQ_5Z40wnzzuCdbVvcyd-8e42FGSNG4bfXvt048e-B76uNGdLzbcgiL2t-Rnm-VPr7";
 }

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:qwerty/screens/bottom_navigator/bottom_navigator.dart';
 import 'package:qwerty/screens/home_screen/home_screen.dart';
 import 'package:qwerty/screens/splash_screen/welcome_screen.dart';
 import 'package:qwerty/utils/images/images.dart';
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     if (user == null) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => const Welcome()));
     } else {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const TabScreen()));
     }
   }
 

@@ -14,6 +14,10 @@ class AppImages{
   static const String mail = "assets/icons/mail.svg";
   static const String taq = "assets/icons/taq.svg";
   static const String jingle = "assets/icons/jingle.svg";
+  static const String news = "assets/icons/news.svg";
+  static const String products = "assets/icons/products.svg";
+  static const String home = "assets/icons/home.svg";
+  static const String profile = "assets/icons/profile.svg";
 
 
   //font_name

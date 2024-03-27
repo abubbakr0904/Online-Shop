@@ -1,8 +1,11 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:qwerty/screens/home_screen/home_screen.dart';
-
+import 'package:qwerty/screens/message_screen/message_screen.dart';
+import 'package:qwerty/screens/produts_screen/product_screen.dart';
+import 'package:qwerty/screens/profile_screen/profile_screen.dart';
+import 'package:qwerty/utils/images/images.dart';
 import '../../view_models/tab_view_model.dart';
 
 class TabScreen extends StatefulWidget {
@@ -14,10 +17,10 @@ class TabScreen extends StatefulWidget {
 
 class _TabScreenState extends State<TabScreen> {
   List<Widget> screens = [
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    const HomeScreen(),
+    const ProductsScreen(),
+    const ProfileScreen(),
+    const MessageScreen(),
   ];
 
   @override
@@ -26,41 +29,34 @@ class _TabScreenState extends State<TabScreen> {
       body: screens[context.watch<TabViewModel>().getIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: context.watch<TabViewModel>().getIndex,
+        fixedColor: const Color(0xFF6055D8),
         onTap: (newIndex) {
           context.read<TabViewModel>().changeIndex(newIndex);
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.category),
+            icon: SvgPicture.asset(AppImages.home, color: Colors.grey),
             label: "Home",
-            activeIcon: Icon(
-              Icons.category,
-              color: Colors.green,
-            ),
+            activeIcon: SvgPicture.asset(AppImages.home,
+                color: const Color(0xFF6055D8)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.check_box_outline_blank),
-            label: "Categories",
-            activeIcon: Icon(
-              Icons.check_box_outline_blank,
-              color: Colors.green,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: SvgPicture.asset(AppImages.products, color: Colors.grey),
             label: "Products",
-            activeIcon: Icon(
-              Icons.person,
-              color: Colors.green,
-            ),
+            activeIcon: SvgPicture.asset(AppImages.products,
+                color: const Color(0xFF6055D8)),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: SvgPicture.asset(AppImages.profile, color: Colors.grey),
             label: "Profile",
-            activeIcon: Icon(
-              Icons.person,
-              color: Colors.green,
-            ),
+            activeIcon: SvgPicture.asset(AppImages.profile,
+                color: const Color(0xFF6055D8)),
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(AppImages.news, color: Colors.grey),
+            label: "News",
+            activeIcon: SvgPicture.asset(AppImages.news,
+                color: const Color(0xFF6055D8)),
           )
         ],
       ),

@@ -1,16 +1,13 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:qwerty/screens/bottom_navigator/bottom_navigator.dart';
 import 'package:qwerty/utils/images/images.dart';
 import 'package:qwerty/utils/regxps/reg_xp.dart';
-
 import '../../view_models/auth_model.dart';
 import '../../view_models/login_viewmodel.dart';
-import '../home_screen/home_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -31,7 +28,7 @@ class _LoginState extends State<Login> {
     Future.microtask(() {
       if (user != null) {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const HomeScreen();
+          return const TabScreen();
         }));
       }
     });

@@ -25,6 +25,7 @@ dependencies:
   fluttertoast: ^8.0.8
   rename: ^3.0.2
   icons_launcher: ^2.1.7
+  firebase_messaging: ^14.7.20
 
 dev_dependencies:
   flutter_test:

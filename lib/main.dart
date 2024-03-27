@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -7,10 +8,21 @@ import 'package:qwerty/services/local_database.dart';
 import 'package:qwerty/view_models/auth_model.dart';
 import 'package:qwerty/view_models/login_viewmodel.dart';
 import 'package:qwerty/view_models/product_view_model.dart';
+import 'package:qwerty/view_models/tab_view_model.dart';
 
 import 'firebase_options.dart';
-
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  debugPrint(
+      "BACKGROUND MODE DA PUSH NOTIFICATION KELDI:${message.notification!.title}");
+}
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureLocalTimeZone();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  FirebaseMessaging.instance.subscribeToTopic("news");
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   LocalNotificationService.localNotificationService.init(navigatorKey);
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +32,7 @@ Future<void> main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => LoginViewModel()),
         ChangeNotifierProvider(create: (_) => AuthViewModel()),
+        ChangeNotifierProvider(create: (_) => TabViewModel()),
         ChangeNotifierProvider(create: (_) => ProductsViewModel()),
       ],
       child: const MyApp(),
