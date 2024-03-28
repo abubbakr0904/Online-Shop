@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:qwerty/screens/detail_screen/detail_screen.dart';
+import 'package:qwerty/screens/permission_screen/permission_screen.dart';
 import 'package:qwerty/screens/produts_screen/product_screen.dart';
 import 'package:qwerty/utils/images/images.dart';
 
@@ -53,7 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, CupertinoPageRoute(builder: (context) => PermissionScreen()));
+                      },
                       icon: SvgPicture.asset(AppImages.jingle,
                           width: 25.w, fit: BoxFit.cover))
                 ],
@@ -153,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       6,
                       (index) => GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const DetailScreen(image: AppImages.oyoqKiyim, price: "\$430")));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const DetailScreen(image: AppImages.oyoqKiyim, price: "\$430" , docId: "132",)));
                         },
                         child : Container(
                           margin: EdgeInsets.only(
@@ -235,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       6,
                           (index) => GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const DetailScreen(image: AppImages.oyoqKiyim, price: "\$430")));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const DetailScreen(image: AppImages.oyoqKiyim, price: "\$430" ,docId: "123",)));
                           },
                           child : Container(
                             margin: EdgeInsets.only(

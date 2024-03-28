@@ -18,6 +18,7 @@ class AppImages{
   static const String products = "assets/icons/products.svg";
   static const String home = "assets/icons/home.svg";
   static const String profile = "assets/icons/profile.svg";
+  static const String photo = "assets/icons/photo.svg";
 
 
   //font_name

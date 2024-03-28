@@ -1,7 +1,9 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+import 'package:qwerty/screens/produts_screen/widgtes/add_category_screen/add_category_screen.dart';
 import 'package:qwerty/screens/produts_screen/widgtes/widget.dart';
 import 'package:qwerty/utils/images/images.dart';
 
@@ -67,29 +69,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
           title: const Text("Products"),
           actions: [
             IconButton(
-              onPressed: () async {
-                context.read<ProductsViewModel>().insertProducts(
-                      ProductModel(
-                        price: 12.5,
-                        imageUrl: AppImages.oyoqKiyim,
-                        productName: "Nike Jordan",
-                        docId: "",
-                        productDescription: "productDescription",
-                        categoryId: "kcggCJzOEz7gH1LQy44x",
-                      ),
-                      context,
-                    );
-
-                ApiProvider().sendNotificationToUsers(
-                  topicName: "news",
-                  title: "Bu test notification",
-                  body: "Yana test notiifcation",
-                );
-                // debugPrint("MESSAGE ID:$messageId");
-                LocalNotificationService().showNotification(
-                    title: "Qoshildi", body: "Muvaffaqiyatli qoshildi", id: id);
-                id++;
-                _showSnackbar(text: "Qoshildi");
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (context)=>const AddProducts()));
               },
               style: IconButton.styleFrom(
                   backgroundColor: Colors.black.withOpacity(0.2)),
