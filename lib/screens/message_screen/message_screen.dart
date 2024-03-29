@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../data/models/product_model.dart';
 import '../../utils/images/images.dart';
+import '../../view_models/location_view_model.dart';
+import '../../view_models/map_view_model.dart';
 import '../../view_models/product_view_model.dart';
+import '../google_maps_screen/google_maps_screen.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({super.key});
@@ -14,6 +18,11 @@ class MessageScreen extends StatefulWidget {
 
 class _MessageScreenState extends State<MessageScreen> {
   List<ProductModel> products = [];
+  @override
+  void initState() {
+    LatLng? latLng = context.read<LocationViewModel>().latLng;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +33,30 @@ class _MessageScreenState extends State<MessageScreen> {
           color : Colors.transparent
         ),
         title: Text("Message"),
+        actions: [
+          IconButton(onPressed: (){
+            LatLng? latLng = context.read<LocationViewModel>().latLng;
+            if (latLng != null) {
+              Provider.of<MapsViewModel>(context, listen: false)
+                  .setLatInitialLong(latLng);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return GoogleMapsScreen();
+                  },
+                ),
+              );
+            }
+            else{
+              debugPrint("Null kelidi ");
+            }
+          }, icon: Icon(
+            Icons.location_history_rounded,
+            color : Colors.black,
+
+          ))
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -50,16 +83,16 @@ class _MessageScreenState extends State<MessageScreen> {
                           (index) => Container(
                                 width: double.infinity,
                                 margin: EdgeInsets.symmetric(
-                                    horizontal: 15.h, vertical: 15.w),
+                                    horizontal: 15.h, vertical: 5.w),
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 10.h, vertical: 10.w),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(20.r),
-                                      topRight: Radius.circular(20.r),
-                                      bottomLeft: Radius.circular(20.r),
+                                      topLeft: Radius.circular(40.r),
+                                      topRight: Radius.circular(40.r),
+                                      bottomRight: Radius.circular(40.r),
                                     ),
-                                    color: const Color(0xFFF8F7F7)),
+                                    color: Colors.black.withOpacity(0.05)),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -70,7 +103,7 @@ class _MessageScreenState extends State<MessageScreen> {
                                           child: Image.network(
                                               products[index].imageUrl,
                                               width: 60.w,
-                                              height: 60.h,
+                                              height: 60.w,
                                               fit: BoxFit.cover),
                                           borderRadius: BorderRadius.circular(60.r),
                                         ),

@@ -7,7 +7,9 @@ import 'package:qwerty/screens/splash_screen/splash_screen.dart';
 import 'package:qwerty/services/local_database.dart';
 import 'package:qwerty/view_models/auth_model.dart';
 import 'package:qwerty/view_models/image_view_model.dart';
+import 'package:qwerty/view_models/location_view_model.dart';
 import 'package:qwerty/view_models/login_viewmodel.dart';
+import 'package:qwerty/view_models/map_view_model.dart';
 import 'package:qwerty/view_models/product_view_model.dart';
 import 'package:qwerty/view_models/tab_view_model.dart';
 
@@ -35,6 +37,8 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (_) => AuthViewModel()),
         ChangeNotifierProvider(create: (_) => TabViewModel()),
         ChangeNotifierProvider(create: (_) => ImageViewModel()),
+        ChangeNotifierProvider(create: (_) => MapsViewModel()),
+        ChangeNotifierProvider(create: (_) => LocationViewModel()),
         ChangeNotifierProvider(create: (_) => ProductsViewModel()),
       ],
       child: const MyApp(),

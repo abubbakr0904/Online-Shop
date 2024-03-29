@@ -29,6 +29,8 @@ dependencies:
   permission_handler: ^11.3.1
   image_picker: ^1.0.7
   firebase_storage: ^11.6.11
+  location: ^5.0.3
+  google_maps_flutter: ^2.6.0
 
 dev_dependencies:
   flutter_test:

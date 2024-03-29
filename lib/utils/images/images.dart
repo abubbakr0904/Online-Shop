@@ -4,6 +4,10 @@ class AppImages{
   static const String person = "assets/images/persin.png";
   static const String oyoqKiyim = "assets/images/oyoq_kiyim.png";
   static const String logo = "assets/images/icon_app.png";
+  static const String carrier = "assets/images/carrier.png";
+  static const String homeL = "assets/images/home_l.png";
+  static const String location = "assets/images/location.png";
+  static const String work = "assets/images/work.png";
 
   //svg
   static const String apple = "assets/icons/apple.svg";
